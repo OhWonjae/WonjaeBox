@@ -1,0 +1,28 @@
+@import "src/styles/common/mixin";
+
+
+.gnb {
+
+  ul {
+    height: 100%;
+    line-height: 70px;
+    list-style: none;
+
+
+  }
+
+  li {
+    float:left;
+    padding:0 20px;
+  }
+
+
+  display:none;
+
+
+  @include tablet {
+    display:block;
+    height:70px;
+  }
+
+}

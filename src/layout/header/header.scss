@@ -1,0 +1,48 @@
+@import 'src/styles/common/mixin';
+
+.header {
+  align-items: center;
+  background-color: transparent;
+  border: #adadad 1px solid;
+  display: flex;
+  font-size: 1.5rem;
+  height:50px;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+
+  .menu-icon {
+    height: 80%;
+  }
+
+  .right-icon {
+    height:80%;
+    margin-right: 20px;
+
+    img {
+      height:100%;
+    }
+  }
+
+  .menu {
+    align-items:center;
+    display:flex;
+    height: 100%;
+
+    .menu-icon {
+      display:inline-block;
+
+      @include tablet {
+        display:none;
+      }
+    }
+
+
+  }
+
+
+  @include tablet {
+    height:70px;
+  }
+
+}
