@@ -3,25 +3,36 @@
 .header {
   align-items: center;
   background-color: transparent;
-  border: #adadad 1px solid;
+  border: none;
   display: flex;
   font-size: 1.5rem;
   height:50px;
   justify-content: space-between;
   position: fixed;
+  transition-duration: 0.3s, 0.3s;
+  transition-property: background-color, border;
+  transition-timing-function: ease,ease;
   width: 100%;
+
+  &.active {
+    background-color: #ffffff;
+    border-bottom: #f2f2f2 3px double;
+  }
 
   .menu-icon {
     height: 80%;
   }
 
   .right-icon {
-    height:80%;
+    display: flex;
+    gap:10px;
+    height:70%;
     margin-right: 20px;
 
     img {
       height:100%;
     }
+
   }
 
   .menu {
