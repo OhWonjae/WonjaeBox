@@ -1,9 +1,7 @@
 import React from 'react';
 import './gnb.scss';
-type GNBProps = {
-  children: React.ReactNode;
-};
-export const GNB = ({ children }: GNBProps) => {
+
+export const GNB = () => {
   return (
     <nav className={'gnb'}>
       <ul>
