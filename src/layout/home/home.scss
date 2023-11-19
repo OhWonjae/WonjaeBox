@@ -1,0 +1,114 @@
+@import '@/styles/common/mixin';
+
+.home {
+  align-items: center;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  height:calc(100vh - 50px);
+  margin-top:20px;
+  padding:20px;
+
+  @include tablet {
+    height:calc(100vh - 70px);
+  }
+
+  .word-container {
+    color: white;
+    padding-top: 30px;
+    width:100%;
+
+    p {
+      font-size: 3rem;
+    }
+
+    .css-typing p {
+      border-right: .15em solid orange;
+      overflow: hidden;
+      white-space: nowrap;
+
+
+    }
+
+    .css-typing p:nth-child(1) {
+      animation: type 2s steps(40, end);
+      animation-fill-mode: forwards;
+      width: 650px;
+
+
+    }
+
+    .css-typing p:nth-child(2) {
+      animation: type2 2s steps(40, end),
+        blink .5s step-end infinite alternate;
+      animation-delay: 2s;
+      animation-fill-mode: forwards;
+      opacity: 0;
+      width: 900px;
+
+      &.active {
+        width: 900px;
+      }
+    }
+
+    @keyframes type {
+
+      0% {
+        width: 0;
+      }
+
+      99.9% {
+        border-right: .15em solid orange;
+      }
+
+      100% {
+        border: none;
+      }
+    }
+
+    @keyframes type2 {
+
+      0% {
+        width: 0;
+      }
+
+      1% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes blink {
+
+      50% {
+        border-color: transparent;
+      }
+    }
+
+  }
+
+  .down-arrow {
+    background-color:transparent;
+    display:block;
+    margin: 60px auto;
+    opacity: 0.1;
+    transition: opacity 0.3s ease;
+    width: 150px;
+
+
+
+    &.active {
+      opacity: 1;
+
+    }
+  }
+
+  .logo {
+    background-color: #f2f2f2;
+    height: 381px;
+    width: 250px;
+  }
+}

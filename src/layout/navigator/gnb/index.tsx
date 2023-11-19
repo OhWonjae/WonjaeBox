@@ -5,9 +5,9 @@ export const GNB = () => {
   return (
     <nav className={'gnb'}>
       <ul>
-        <li>Sprite Generator</li>
-        <li>Resume</li>
         <li>About</li>
+        <li>Projects</li>
+        <li>Resume</li>
       </ul>
     </nav>
   );
