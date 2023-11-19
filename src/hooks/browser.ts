@@ -1,13 +1,11 @@
 import { useEffect, useState } from 'react';
 
 export const useBrowserScrollDown = () => {
-  const [isScrollDown, setIsScrollDown] = useState(false);
+  const [scrollPercent, setScrollPercent] = useState(0);
   const handleOnScrollEvent = (e: Event) => {
-    if (window.scrollY > 0) {
-      setIsScrollDown(true);
-    } else {
-      setIsScrollDown(false);
-    }
+    const percent =
+      window.scrollY / (document.body.scrollHeight - window.innerHeight);
+    setScrollPercent(percent);
   };
   useEffect(() => {
     window.addEventListener('scroll', handleOnScrollEvent);
@@ -16,18 +14,16 @@ export const useBrowserScrollDown = () => {
       window.removeEventListener('scroll', handleOnScrollEvent);
     };
   }, []);
-  return [isScrollDown];
+  return [scrollPercent];
 };
 
 export const useAnimationEnd = (element: HTMLDivElement | null) => {
   const [isAnimationEnd, setIsAnimationEnd] = useState(false);
   const handleOnAnimationEndEvent = (e: Event) => {
     if (!isAnimationEnd) {
-      console.log('asdfsdf');
       setIsAnimationEnd(true);
     }
   };
-  console.log('elemetn!!', element);
   useEffect(() => {
     if (element) {
       console.log('element!!');

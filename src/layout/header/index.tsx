@@ -5,9 +5,10 @@ import { Logo } from '@/components/logo';
 import { useBrowserScrollDown } from '@/hooks/browser';
 
 export const Header = () => {
-  const [isScrollDown] = useBrowserScrollDown();
+  const [scrollPercent] = useBrowserScrollDown();
+  console.log('sc', scrollPercent);
   return (
-    <div className={`header ${isScrollDown && 'active'}`}>
+    <div className={`header ${scrollPercent > 0 && 'active'}`}>
       <div className={'menu'}>
         <Logo />
         <GNB />
