@@ -1,10 +1,10 @@
-import './about.scss';
+import './resume.scss';
 import React from 'react';
 import { SectionWrapper } from '@/layout/wrapper/section-wrapper';
-export const About = () => {
+export const Resume = () => {
   return (
     <SectionWrapper>
-      <div className={'about'}>about</div>
+      <div className={'resume'}>resume.</div>
     </SectionWrapper>
   );
 };

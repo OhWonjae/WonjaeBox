@@ -2,13 +2,13 @@ import './header.scss';
 import React from 'react';
 import { GNB } from '@/layout/navigator/gnb';
 import { Logo } from '@/components/logo';
-import { useBrowserScrollDown } from '@/hooks/browser';
 
-export const Header = () => {
-  const [scrollPercent] = useBrowserScrollDown();
-  console.log('sc', scrollPercent);
+interface HeaderProps {
+  scrollY: number;
+}
+export const Header = ({ scrollY }: HeaderProps) => {
   return (
-    <div className={`header ${scrollPercent > 0 && 'active'}`}>
+    <div className={`header ${scrollY > 0 && 'active'}`}>
       <div className={'menu'}>
         <Logo />
         <GNB />

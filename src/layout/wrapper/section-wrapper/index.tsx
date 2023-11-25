@@ -1,15 +1,10 @@
 import './section-wrapper.scss';
 import { ReactNode } from 'react';
+import { useBrowserScrollDown } from '@/hooks/browser';
 
 type SectionWrapperTypes = {
   children: ReactNode;
-  title: string;
 };
-export const SectionWrapper = ({ children, title }: SectionWrapperTypes) => {
-  return (
-    <div className={'section'}>
-      <div className={'title'}>{title}</div>
-      <div className={'content'}>{children}</div>
-    </div>
-  );
+export const SectionWrapper = ({ children }: SectionWrapperTypes) => {
+  return <div className={'section'}>{children}</div>;
 };
