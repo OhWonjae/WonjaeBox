@@ -1,5 +1,11 @@
 .section {
-  background-color: black;
-  border:1px solid white;
-  height:calc(100vh - 70px);
+  //min-height:calc(100vh - 70px);
+  padding: 50px 100px;
+
+  .scroll-down-section {
+    align-items: center;
+    display:flex;
+    height:20%;
+    justify-content: center;
+  }
 }

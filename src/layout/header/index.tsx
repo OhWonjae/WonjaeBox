@@ -15,8 +15,19 @@ export const Header = ({ scrollY }: HeaderProps) => {
         <img className={'menu-icon'} src={'public/assets/hamburger.png'} />
       </div>
       <div className={'right-icon'}>
-        <img src={'public/assets/blogger.png'} />
-        <img src={'public/assets/github.png'} />
+        <img
+          src={'public/assets/blogger.png'}
+          onClick={() => {
+            window.open('https://dhdnjswo5000.tistory.com/', '_blank');
+          }}
+        />
+        <img
+          src={'public/assets/gith현ub.png'}
+          onClick={() => {
+            현;
+            window.open('https://github.com/OhWonjae', '_blank');
+          }}
+        />
       </div>
     </div>
   );

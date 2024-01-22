@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 import { PageInfoTypes } from '@/types/layoutTypes';
 
-export const useBrowserScroll = () => {
-  const [prevScrollY, setPrevScrollY] = useState(window.scrollY);
-  const [currentSection, setCurrentSection] = useState(0);
+export const useBrowserScroll = (): [number, number, boolean] => {
+  const [prevScrollY, setPrevScrollY] = useState<number>(window.scrollY);
+  const [currentSection, setCurrentSection] = useState<number>(0);
   const sectionH = window.innerHeight - 70;
-  const scrollDownRange = sectionH * 0.3;
-  const scrollUpRange = sectionH * 0.3;
+  const scrollDownRange = sectionH * 0.1;
+  const scrollUpRange = sectionH * 0.1;
+  const [scrollStop, setScrollStop] = useState<boolean>(false);
   const percent =
     window.scrollY / (document.body.scrollHeight - window.innerHeight);
   const scrollToSection = (sectionIdx: number) => {
@@ -18,54 +19,77 @@ export const useBrowserScroll = () => {
 
   const handleOnScrollEvent = (e: Event) => {
     const currentSectionIdx = currentSection;
-    Object.keys(PageInfoTypes).forEach((key) => {
-      if (
-        PageInfoTypes[key].idx < 4 &&
-        PageInfoTypes[key].idx * sectionH - scrollUpRange < window.scrollY &&
-        PageInfoTypes[key].idx * sectionH + sectionH + scrollDownRange >=
-          window.scrollY
-      ) {
-        console.log('choice', PageInfoTypes[key].idx);
-        //currentSectionIdx = PageInfoTypes[key].idx;
-        setCurrentSection(PageInfoTypes[key].idx);
-        // scrollToSection(PageInfoTypes[key].idx);
-        return;
-      }
-    });
-    setPrevScrollY(window.scrollY);
-    if (
-      currentSection > 0 &&
-      currentSection * sectionH - scrollUpRange > window.scrollY &&
-      (currentSection - 1) * sectionH < window.scrollY
-    ) {
-      scrollToSection(currentSection - 1);
-      return;
-    } else if (
-      currentSection < 4 &&
-      currentSection * sectionH + scrollDownRange < window.scrollY &&
-      (currentSection + 1) * sectionH > window.scrollY
-    ) {
-      scrollToSection(currentSection + 1);
-      return;
-    }
+    // Object.keys(PageInfoTypes).forEach((key) => {
+    //   if (
+    //     PageInfoTypes[key].idx < 4 &&
+    //     PageInfoTypes[key].idx * sectionH - scrollUpRange < window.scrollY &&
+    //     PageInfoTypes[key].idx * sectionH + sectionH + scrollDownRange >=
+    //       window.scrollY
+    //   ) {
+    //     setCurrentSection(PageInfoTypes[key].idx);
+    //     return;
+    //   }
+    // });
+    // const sectionTop = currentSection * sectionH;
+    // if (
+    //   window.scrollY > sectionTop &&
+    //   window.scrollY > (currentSection + 1) * sectionH
+    // ) {
+    //   stopScroll();
+    // } else if (
+    //   window.scrollY < sectionTop &&
+    //   window.scrollY < (currentSection - 1) * sectionH
+    // ) {
+    //   stopScroll();
+    // }
+
+    // setPrevScrollY(window.scrollY);
+    // if (
+    //   currentSection > 0 &&
+    //   currentSection * sectionH - scrollUpRange > window.scrollY &&
+    //   (currentSection - 1) * sectionH < window.scrollY
+    // ) {
+    //   //scrollToSection(currentSection - 1);
+    //   return;
+    // } else if (
+    //   currentSection < 4 &&
+    //   currentSection * sectionH + scrollDownRange < window.scrollY &&
+    //   (currentSection + 1) * sectionH > window.scrollY
+    // ) {
+    //   //scrollToSection(currentSection + 1);
+    //   return;
+    // }
   };
 
   const handleOnScrollEndEvent = () => {
+    setScrollStop(false);
     const sectionTop = currentSection * sectionH;
-    console.log('st', sectionTop);
     if (window.scrollY > sectionTop) {
       if (
-        sectionTop < window.scrollY &&
-        sectionTop + scrollDownRange >= window.scrollY
+        currentSection < 4 &&
+        sectionTop + scrollDownRange <= window.scrollY
       ) {
+        scrollToSection(currentSection + 1);
+        return;
+      } else {
         scrollToSection(currentSection);
         return;
       }
     } else {
-      if (
-        sectionTop - scrollUpRange < window.scrollY &&
-        sectionTop > window.scrollY
-      ) {
+      if (currentSection > 0 && sectionTop - scrollUpRange > window.scrollY) {
+        console.log(
+          'scroll up section1',
+          sectionTop - scrollUpRange,
+          window.scrollY,
+        );
+        scrollToSection(currentSection - 1);
+        return;
+      } else {
+        console.log(
+          'scroll up section2',
+          sectionTop - scrollUpRange,
+          window.scrollY,
+        );
         scrollToSection(currentSection);
         return;
       }
@@ -73,7 +97,7 @@ export const useBrowserScroll = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleOnScrollEvent);
+    window.addEventListener('scroll', handleOnScrollEvent, { passive: false });
     window.addEventListener('scrollend', handleOnScrollEndEvent);
 
     return () => {
@@ -81,7 +105,7 @@ export const useBrowserScroll = () => {
       window.removeEventListener('scrollend', handleOnScrollEndEvent);
     };
   }, [prevScrollY, currentSection]);
-  return [prevScrollY, currentSection];
+  return [prevScrollY, currentSection, scrollStop];
 };
 
 export const useAnimationEnd = (element: HTMLDivElement | null) => {

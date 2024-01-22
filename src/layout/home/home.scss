@@ -2,16 +2,11 @@
 
 .home {
   align-items: center;
-  background-color: black;
   display: flex;
   flex-direction: column;
-  height:calc(100vh - 70px);
   margin-top:20px;
+  min-height:calc(100vh - 70px);
   padding:20px;
-
-  @include tablet {
-    height:calc(100vh - 70px);
-  }
 
   .word-container {
     color: white;
@@ -90,21 +85,7 @@
 
   }
 
-  .down-arrow {
-    background-color:transparent;
-    display:block;
-    margin: 60px auto;
-    opacity: 0.1;
-    transition: opacity 0.3s ease;
-    width: 150px;
 
-
-
-    &.active {
-      opacity: 1;
-
-    }
-  }
 
   .logo {
     background-color: #f2f2f2;
