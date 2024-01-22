@@ -1,5 +1,32 @@
 @import '@/styles/common/mixin';
 
 .about {
+  align-items: center;
   color:white;
+
+  .title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  .skill {
+    background-color: white;
+    border:1px solid white;
+    border-radius: 20px;
+    color:black;
+    display: flex;
+    margin-top: 30px;
+    max-width:1060px;
+    padding: 10px 40px;
+
+    .role {
+      font-size:2rem;
+      width: 300px;
+    }
+
+    .skill-name {
+      margin-left:100px;
+    }
+  }
 }

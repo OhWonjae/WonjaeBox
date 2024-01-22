@@ -1,6 +1,6 @@
 @import '@/styles/common/mixin';
 
-.project {
+.career {
   align-items: center;
   color:white;
 
@@ -8,18 +8,6 @@
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 30px;
-  }
-
-  .icon {
-    position: absolute;
-    top:80%;
-    width: 200px;
-
-    img {
-      cursor: pointer;
-      margin-left:20px;
-      width: 50px;
-    }
   }
 
   .company {
@@ -41,7 +29,6 @@
       font-size: 1rem;
       line-height: 1.3rem;
       margin-left: 20px;
-      position: relative;
       width:65%;
     }
   }
