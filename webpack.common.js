@@ -24,7 +24,10 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
       },
-      { test: /\.scss$/i, use: ['style-loader', 'css-loader', 'sass-loader'] },
+      {
+        test: /\.scss$/i,
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+      },
       {
         test: /\.(jpg|png|svg|jpeg)$/,
         type: 'asset/resource',

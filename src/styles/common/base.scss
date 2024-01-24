@@ -1,5 +1,6 @@
 @import './mixin';
 
+
 * {
   margin:0;
   padding:0;
@@ -22,3 +23,7 @@ html,body,#root {
   font-weight: normal;
   src: url("public/assets/fonts/ResistSans.otf") format('opentype');
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

@@ -16,19 +16,44 @@ export const About = () => {
         <p
           className={'sub'}
         >{`리액트로 B2B 이커머스 사이트의 초기세팅부터 런칭까지 진행했습니다.`}</p>
-        <div className={'skill'}>
-          <div className={'role'}>Frontend</div>
+        <div className={'skill bg-amber-300 shadow-xl shadow-blue-950'}>
+          <div className={'role'}>
+            <span className={'bg-amber-500 shadow-xl rounded-2xl p-1'}>
+              Skills
+            </span>
+          </div>
           <div className={'skill-name'}>
             <ul>
-              <li>HTML5</li>
-              <li>CSS(SCSS)</li>
-              <li>React v18</li>
-              <li>Next v12</li>
-              <li>Javascript ES6</li>
-              <li>Yarn Berry</li>
-              <li>Webpack</li>
-              <li>Jotai</li>
-              <li>Module System(CJS, ESM)</li>
+              <li>
+                <span>HTML5</span>
+              </li>
+              <li>
+                <span>CSS(SCSS)</span>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <span>Javascript ES6</span>
+              </li>
+              <li>
+                <span>Yarn Berry</span>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <span>React v18</span>
+              </li>
+              <li>
+                <span>Next v12</span>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <span>Webpack</span>
+              </li>
+              <li>
+                <span>Jotai</span>
+              </li>
             </ul>
           </div>
         </div>
