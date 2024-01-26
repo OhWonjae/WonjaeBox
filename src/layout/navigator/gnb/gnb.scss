@@ -2,9 +2,12 @@
 
 
 .gnb {
+  display:block;
+  font-size: 1rem;
+  white-space: nowrap;
 
   ul {
-    height: 100%;
+    height: 70%;
     line-height: 70px;
     list-style: none;
 
@@ -23,12 +26,9 @@
     transition: color .3s;
   }
 
-
-  display:none;
-
-
   @include tablet {
     display:block;
+    font-size: 1.3rem;
     height:70px;
   }
 

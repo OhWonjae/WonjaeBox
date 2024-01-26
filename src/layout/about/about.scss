@@ -28,9 +28,13 @@
       justify-content: space-between;
       margin-top: 20px;
 
-      li {
-        @apply m-4;
+      @include tablet {
+
+        li {
+          @apply m-4;
+        }
       }
+
 
       span {
         white-space: nowrap;
