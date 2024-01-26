@@ -8,16 +8,14 @@
 
 > React v18
 >
-> SCSS
+> SCSS / TailWind
 > 
 > Typescript
 > 
 > webpack v5
-> 
-> Jest
 
 ## 배포
-
+> AWS S3 / CloudFront
 
 ## License
 
