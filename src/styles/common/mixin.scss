@@ -1,6 +1,6 @@
 // 기기별 최소 width px
 $mobile-min: 320px;
-$tablet-min: 768px;
+$tablet-min: 900px;
 $desktop-min: 1024px;
 
 @mixin desktop {

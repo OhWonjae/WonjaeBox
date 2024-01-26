@@ -16,15 +16,20 @@ export const Header = ({ scrollY }: HeaderProps) => {
       </div>
       <div className={'right-icon'}>
         <img
+          src={'public/assets/email.png'}
+          onClick={() => {
+            window.open('mailto:dhdnjswo5000@naver.com', '_blank');
+          }}
+        />
+        <img
           src={'public/assets/blogger.png'}
           onClick={() => {
             window.open('https://dhdnjswo5000.tistory.com/', '_blank');
           }}
         />
         <img
-          src={'public/assets/gith현ub.png'}
+          src={'public/assets/github.png'}
           onClick={() => {
-            현;
             window.open('https://github.com/OhWonjae', '_blank');
           }}
         />

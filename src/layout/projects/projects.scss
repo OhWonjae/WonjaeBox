@@ -31,18 +31,34 @@
     margin-top: 30px;
     max-width:1440px;
     padding: 10px 40px;
+    position:relative;
 
     .role {
-      font-size:1.5rem;
+      font-size:2rem;
+      font-weight: bold;
       width:30%;
     }
 
     .role-detail {
-      font-size: 1rem;
-      line-height: 1.3rem;
+      font-size: 1.3rem;
+      line-height: 2.3rem;
       margin-left: 20px;
-      position: relative;
       width:65%;
+
+      .skill-list {
+        display: flex;
+        position: absolute;
+        right:0%;
+        top:-40px;
+
+        button {
+          @apply w-20 h-12 mr-2  rounded-xl border-4 border-red-700 bg-white  text-base  leading-normal text-red-800;
+        }
+      }
+
+      li {
+        list-style: disc;
+      }
     }
   }
 }
