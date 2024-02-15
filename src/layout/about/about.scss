@@ -3,11 +3,34 @@
 .about {
   align-items: center;
   color:white;
+  height:50vh;
+
 
   .title {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 30px;
+  }
+
+  .sub {
+    font-size: 2rem;
+    line-height: 50px;
+    margin-bottom: 30px;
+  }
+
+  @include tablet {
+
+    .title {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .sub {
+      font-size: 2rem;
+      line-height: 40px;
+      margin-bottom: 30px;
+    }
   }
 
   .skill {

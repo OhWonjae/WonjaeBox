@@ -34,6 +34,24 @@
       margin-left: 20px;
       width:65%;
 
+      .md-title {
+
+        &.special {
+          color:red;
+        }
+
+        font-size: 1.6rem;
+        font-weight: bold;
+        margin-top: 30px;
+
+        li {
+          color:black;
+          font-size: 1.2rem;
+          font-weight: normal;
+          margin-left: 30px;
+        }
+      }
+
       .skill-list {
         display: flex;
         position: absolute;

@@ -29,7 +29,11 @@ export const SectionWrapper = ({
     handleSetMenuScrollTop(divRef.current, id);
   }, [divRef.current, id]);
   return (
-    <div className={'section'} ref={divRef} style={style}>
+    <div
+      className={'section shadow-2xl shadow-gray-950'}
+      ref={divRef}
+      style={style}
+    >
       {children}
       {/*<div className={'scroll-down-section'}>*/}
       {/*  <ScrollDown />*/}

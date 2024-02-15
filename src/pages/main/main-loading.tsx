@@ -23,6 +23,14 @@ export const MainLoading = ({ loadingState }: MainLoadingProps) => {
       };
     }
   }, [logoLetterRef.current]);
+  const handleOnClickEvent = () => {
+    loadingState(false);
+  };
+  useEffect(() => {
+    window.addEventListener('click', handleOnClickEvent);
+    return () => window.removeEventListener('click', handleOnClickEvent);
+  }, []);
+
   return (
     <div className={'main-loading'}>
       <div className={'logo-container'}>
