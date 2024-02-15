@@ -2,21 +2,20 @@
 
 
 .gnb {
-  display:block;
+  display:inline-block;
   font-size: 1rem;
-  white-space: nowrap;
+
 
   ul {
+    display: flex;
     height: 70%;
     line-height: 70px;
     list-style: none;
-
 
   }
 
   li {
     cursor:pointer;
-    float:left;
     padding:0 20px;
 
   }
@@ -27,7 +26,7 @@
   }
 
   @include tablet {
-    display:block;
+    display:inline-block;
     font-size: 1.3rem;
     height:70px;
   }

@@ -1,12 +1,13 @@
 .main-loading {
   align-items: center;
   display: flex;
-  height: 100%;
+  height: 100vh;
   justify-content: center;
 }
 
 .logo-container {
   height:612px;
+  margin: auto;
   position: relative;
   width:401px;
 }

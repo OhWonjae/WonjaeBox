@@ -12,7 +12,7 @@ export const Header = ({ scrollY }: HeaderProps) => {
       <div className={'menu'}>
         <Logo />
         <GNB />
-        <img className={'menu-icon'} src={'public/assets/hamburger.png'} />
+        {/*<img className={'menu-icon'} src={'public/assets/hamburger.png'} />*/}
       </div>
       <div className={'right-icon'}>
         <img

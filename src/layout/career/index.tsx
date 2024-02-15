@@ -23,31 +23,31 @@ export const Career = () => {
               <button type="button">Jest</button>
               <button type="button">MobX</button>
             </div>
-            <ul>
-              <li>React의 SPA 방식 사용</li>
+            <div className={'md-title'}>
+              디자인시스템 개발 및 테스트
+              <li>
+                Pagination, Z-Indexer, PopOver/Modal 등 공통 라이브러리 개발
+              </li>
+              <li>Jest, React-Testing-Library를 이용하여 TDD 개발</li>
+            </div>
+
+            <div className={'md-title'}>
+              프로젝트 구조 세팅
               <li>
                 Yarn Workspaces의 모노레포 구조를 적용하여 개발시 생산성 높임
-                (공동 참여)
               </li>
               <li>
                 Webpack의 ModuleFederation 기능으로 도메인 메뉴별 Micro-Frontend
-                아키텍쳐를 적용하여 모노레포가 가지는 의존성 문제 해결 (공동
-                참여)
+                아키텍쳐를 적용하여 모노레포가 가지는 의존성 문제 해결
               </li>
+            </div>
+            <div className={'md-title'}>
+              페이지 개발
               <li>
-                배포시 Jenkins 파이프라인을 통한 CICD 프로세스 구축 (gitlab,
-                docker, gitOps, argoCD) (공동 참여)
+                React 함수형 컴포넌트를 사용하여 게시판, 정산 등 도메인 페이지
+                개발
               </li>
-              <li>
-                디자인 시스템 공통 UI 라이브러리를 테스트를 위한 Linking 방식
-                사용
-              </li>
-              <li>상태 관리를 위해 MobX를 프로젝트에 적용</li>
-              <li>
-                페이지네이션, Z-Indexer, PopOver 등의 공통 라이브러리 개발
-              </li>
-              <li>정산, 게시판, 기본 정보 관리 도메인 페이지 개발</li>
-            </ul>
+            </div>
           </div>
         </div>
         <div className={'company'}>
@@ -76,37 +76,43 @@ export const Career = () => {
               <button type="button">Yarn v3</button>
             </div>
             <ul>
-              <p className={'text-2xl text-purple-400'}>2022.08 ~ 2023.9</p>
-              <div className={'border-t-4 border-t-black mt-4 mb-4'}></div>
-              <li>
-                next.js 와 nest.js(BFF) 모노레포 구조 적용하여 개발 편의성 높임
-              </li>
-              <li>
-                nest.js에서 사용하기 위해 모노레포 내부의 공통 타입 패키지
-                빌드파일을 cjs와 esm방식 따로 적용
-              </li>
-              <li>기존 불필요한 젠킨스 빌드 프로세스 수정</li>
-              <li>
-                1차 배포 최적화 - Yarn Berry의 pnp모드 적용하여 next.js, nest.js
-                각각 전체 배포시간 60% 단축 (기존에 모노레포로 인한 리소스
-                비대화로 약 8분 가량 걸렸던 작업이 3~4분대로 단축)
-              </li>
-              <li>
-                2차 배포 최적화 - 개발계 서버 이슈로 인한 프론트 배포파일 용량
-                최적화 요청 → next.js의 경우 standalone 방식으로 배포진행 (기존
-                이미지 용량 700mb → 120mb 로 단축)
-              </li>
-              <li>
-                정산, 선물하기 보관함,할당, 발송 도메인 페이지 및 BFF 개발
-              </li>
-              <p className={'text-2xl text-purple-400 mt-5'}>2023.09 ~ 현재</p>
-              <div className={'border-t-4 border-t-black mt-4 mb-4'}></div>
-              <li>기존 사이트 인증처리 방식 전체 리팩토링 및 보안 강화</li>
-              <li>Refresh토큰 적용하여 Access토큰 탈취 취약점 보안</li>
-              <li>XSS/CSRF 대비한 토큰 쿠키 저장방식 변경</li>
-              <li>보안검사를 통해 나온 취약점 개선 및 2중 토큰 검증 강화</li>
-              <li>중복로그인 처리 및 자동 로그아웃 기능 구현</li>
-              <li>더포터존 전체 회원가입 로직 리팩토링</li>
+              <div className={'md-title'}>
+                페이지 개발
+                <li>
+                  정산, 선물하기 보관함,할당, 발송 도메인 페이지 및 BFF 개발
+                </li>
+                <li>회원가입 페이지 로직 리팩토링</li>
+              </div>
+              <div className={'md-title'}>
+                인증 리팩토링 및 보안강화
+                <li>Refresh토큰 적용하여 Access토큰 탈취 취약점 보안</li>
+                <li>토큰의 쿠키 저장방식 변경</li>
+                <li>중복로그인 처리 및 자동 로그아웃 기능 구현</li>
+              </div>
+              <div className={'md-title'}>
+                프로젝트 구조 세팅
+                <li>
+                  next.js 와 nest.js(BFF) 모노레포 구조 적용하여 개발 편의성
+                  높임
+                </li>
+                <li>
+                  nest.js에서 사용하기 위해 모노레포 내부의 공통 타입 빌드파일을
+                  cjs와 esm방식 각각 적용
+                </li>
+              </div>
+              <div className={'md-title special'}>
+                특이사항
+                <li>
+                  1차 배포 최적화 - Yarn Berry의 pnp모드 적용하여 next.js,
+                  nest.js 각각 전체 배포시간 60% 단축 (기존에 모노레포로 인한
+                  리소스 비대화로 약 8분 가량 걸렸던 작업이 3~4분대로 단축)
+                </li>
+                <li>
+                  2차 배포 최적화 - 개발계 서버 이슈로 인한 프론트 배포파일 용량
+                  최적화 요청 → next.js의 경우 standalone 방식으로 배포진행
+                  (기존 이미지 용량 700mb → 120mb 로 단축)
+                </li>
+              </div>
             </ul>
           </div>
         </div>
