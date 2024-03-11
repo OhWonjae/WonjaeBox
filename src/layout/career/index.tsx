@@ -23,31 +23,34 @@ export const Career = () => {
               <button type="button">Jest</button>
               <button type="button">MobX</button>
             </div>
-            <div className={'md-title'}>
-              디자인시스템 개발 및 테스트
-              <li>
-                Pagination, Z-Indexer, PopOver/Modal 등 공통 라이브러리 개발
-              </li>
-              <li>Jest, React-Testing-Library를 이용하여 TDD 개발</li>
-            </div>
+            <ul>
+              <div className={'md-title'}>
+                디자인시스템 개발 및 테스트
+                <li>
+                  Pagination, Z-Indexer, PopOver/Modal 등 공통 라이브러리 개발
+                </li>
+                <li>Jest, React-Testing-Library를 이용하여 TDD 개발</li>
+              </div>
 
-            <div className={'md-title'}>
-              프로젝트 구조 세팅
-              <li>
-                Yarn Workspaces의 모노레포 구조를 적용하여 개발시 생산성 높임
-              </li>
-              <li>
-                Webpack의 ModuleFederation 기능으로 도메인 메뉴별 Micro-Frontend
-                아키텍쳐를 적용하여 모노레포가 가지는 의존성 문제 해결
-              </li>
-            </div>
-            <div className={'md-title'}>
-              페이지 개발
-              <li>
-                React 함수형 컴포넌트를 사용하여 게시판, 정산 등 도메인 페이지
-                개발
-              </li>
-            </div>
+              <div className={'md-title'}>
+                프로젝트 구조 세팅
+                <li>
+                  Yarn Workspaces의 모노레포 구조를 적용하여 개발시 생산성 높임
+                </li>
+                <li>
+                  Webpack의 ModuleFederation 기능으로 도메인 메뉴별
+                  Micro-Frontend 아키텍쳐를 적용하여 모노레포가 가지는 의존성
+                  문제 해결
+                </li>
+              </div>
+              <div className={'md-title'}>
+                페이지 개발
+                <li>
+                  React 함수형 컴포넌트를 사용하여 게시판, 정산 등 도메인 페이지
+                  개발
+                </li>
+              </div>
+            </ul>
           </div>
         </div>
         <div className={'company'}>
