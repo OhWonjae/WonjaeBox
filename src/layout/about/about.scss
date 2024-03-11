@@ -7,13 +7,13 @@
 
 
   .title {
-    font-size: 3rem;
+    font-size: 2.8rem;
     font-weight: bold;
     margin-bottom: 30px;
   }
 
   .sub {
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 50px;
     margin-bottom: 30px;
   }
@@ -21,49 +21,16 @@
   @include tablet {
 
     .title {
-      font-size: 3rem;
+      font-size: 3.0rem;
       font-weight: bold;
       margin-bottom: 30px;
     }
 
     .sub {
-      font-size: 2rem;
+      font-size: 1.8rem;
       line-height: 40px;
       margin-bottom: 30px;
     }
   }
 
-  .skill {
-    border:1px solid white;
-    border-radius: 20px;
-    color:black;
-    margin-top: 30px;
-    max-width:1060px;
-    padding: 10px 40px;
-
-    .role {
-      font-size:2rem;
-      text-align: center;
-    }
-
-    .skill-name {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 20px;
-
-      @include tablet {
-
-        li {
-          @apply m-4;
-        }
-      }
-
-
-      span {
-        white-space: nowrap;
-
-        @apply bg-amber-400 p-1  rounded-2xl ;
-      }
-    }
-  }
 }
